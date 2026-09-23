@@ -1,0 +1,4 @@
+# C++ compiled executables
+*.exe
+
+scores = []
