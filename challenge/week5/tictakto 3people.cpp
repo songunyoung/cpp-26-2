@@ -14,7 +14,7 @@ int main ()
                     <<"ㅡㅡㅡㅡ"<<endl;
 
     while(true){
-        switch(k%2){ // 서로 번갈아 기며 말을 놓기위해 who변수에 O X, Y까지 넣고 감지할수 있게 해놓았다.
+        switch(k%3){ // 서로 번갈아 기며 말을 놓기위해 who변수에 O X, Y까지 넣고 감지할수 있게 해놓았다.
             case 0:
                 who = 'O';
                 break;
