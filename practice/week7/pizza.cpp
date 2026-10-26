@@ -1,3 +1,20 @@
+
+#include <iostream>
+using namespace std;
+
+class Circle{
+public:
+    //속성
+    int radius;
+    string color;
+    
+    // 메소드
+    double CalcArea(){
+        return 3.14 * radius * radius;
+    }
+};
+
+
 int main(){
     Circle pizza1,pizza2;
 

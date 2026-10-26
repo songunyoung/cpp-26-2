@@ -13,7 +13,7 @@ public:
 
 
 int main(){
-    print obj;
+    PrintData obj;
     obj.print(1);
     obj.print(3.14);
     obj.print("C++14 is cool");
