@@ -1,8 +1,7 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-class circle.cpp{
+class Circle{
 public:
     //속성
     int radius;

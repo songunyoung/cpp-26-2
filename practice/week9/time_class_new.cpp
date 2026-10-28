@@ -36,7 +36,7 @@ void Time::Print(){
 int main(){
 
     Time a{0,0};
-    a.hour =10;//
+    //a.hour =10;//
     a.SetHour(6);
     a.SetMinute(30);
 
