@@ -1,5 +1,5 @@
 int main() {
-    int* score=0;
-    int count=0;
+    const int* score=0;
+    const int count=0;
     return count;
 }
