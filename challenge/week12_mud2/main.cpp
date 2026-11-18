@@ -1,12 +1,10 @@
 #include "user.h"
 using namespace std;
 
-
-
 // 메인  함수
 int main() {
 	// 0은 빈 공간, 1은 아이템, 2는 적, 3은 포션, 4는 목적지
-	int map[mapY][mapX] = { {0, 1, 2, 0, 4},
+	vector<vector<int>> map[mapY][mapX] = { {0, 1, 2, 0, 4},
 					{1, 0, 0, 2, 0},
 					{0, 0, 0, 0, 0},
 					{0, 2, 3, 0, 0},
@@ -180,34 +178,3 @@ void displayMap(int map[][mapX], int user_x, int user_y) {
 
 
 
-//벡터
-class MyVector
-{
-private:
-    double x, y;
-public:
-    MyVector(double x = 0.0, double y = 0.0);
-    string toString();
-    MyVector operator+(const MyVector& v2);
-    MyVector operator-(const MyVector& v2);
-};
-
-
-MyVector::MyVector(double x = 0.0, double y = 0.0);
-string MyVector::toString();
-
-MyVector MyVector::operator+(const MyVector& v2)
-{
-MyVector v;
-v.x = this->x + v2.x;
-v.y = this->y + v2.y;
-return v;
-}
-
-MyVector MyVector::operator-(const MyVector& v2)
-{
-MyVector v;
-v.x = this->x - v2.x;
-v.y = this->y - v2.y;
-return v;
-}
