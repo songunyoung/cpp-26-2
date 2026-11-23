@@ -16,7 +16,8 @@ public:
 	void IncreaseHP(int inc_hp);
 	void DecreaseHP(int dec_hp);
 	int GetHP();
-	virtual void doAttack();
+	bool CheckUser();
+	virtual void doAttack() =0;
 	void myTurn(const vector<vector<int>>& map);
 };
 
@@ -30,9 +31,6 @@ public:
 	Warrior(int p);
 	void doAttack();
 };
-
-
-bool CheckUser(User user);
 
 
 // 사용자 정의 함수

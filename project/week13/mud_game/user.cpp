@@ -11,8 +11,12 @@
 	int User::GetHP(){
 		return this->hp;
 	}
-
-	virtual void User::doAttack() =0;
+	bool User::CheckUser(){
+		if (GetHP() <= 0)
+			return false;
+		else
+			return true;
+	}
 
 	Magician::Magician(int p): User(p){}
 	void Magician::doAttack(){
@@ -23,18 +27,6 @@
 	void Warrior::doAttack(){
 		cout << "베기 사용" << endl;
 	}
-
-
-	void User::myTurn(const vector<vector<int>>& map){}
-
-
-
-bool CheckUser(User user){
-	if (user.GetHP()<=0)
-		return false;
-	else
-		return true;
-}
 
 // 이동하려는 곳이 유효한 좌표인지 체크하는 함수
 bool checkXY(int user_x, int mapX, int user_y, int mapY) {

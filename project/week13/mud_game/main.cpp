@@ -38,7 +38,7 @@ int main() {
 			else {
 				cout << "위로 한 칸 올라갑니다." << endl;
 				displayMap(map, man[chose]->user_x, man[chose]->user_y);
-				DecreaseHP(1);
+				man[chose]->DecreaseHP(1);
 			}
 		}
 		else if (user_input == "하") {
@@ -52,7 +52,7 @@ int main() {
 			else {
 				cout << "위로 한 칸 내려갑니다." << endl;
 				displayMap(map, man[chose]->user_x, man[chose]->user_y);
-				DecreaseHP(1);
+				man[chose]->DecreaseHP(1);
 			}
 		}
 		else if (user_input == "좌") {
@@ -67,7 +67,7 @@ int main() {
 			else {
 				cout << "왼쪽으로 이동합니다." << endl;
 				displayMap(map, man[chose]->user_x, man[chose]->user_y);
-				DecreaseHP(1);
+				man[chose]->DecreaseHP(1);
 			}
 		}
 		else if (user_input == "우") {
@@ -81,7 +81,7 @@ int main() {
 			else {
 				cout << "오른쪽으로 이동합니다." << endl;
 				displayMap(map, man[chose]->user_x, man[chose]->user_y);
-				DecreaseHP(1);
+				man[chose]->DecreaseHP(1);
 			}
 		}
 		else if (user_input == "지도") {
@@ -108,14 +108,14 @@ int main() {
 			
 			case 2 :
 				
-				doAttack();
-				DecreaseHP(2);
+				man[chose]->doAttack();
+				man[chose]->DecreaseHP(2);
 				
 				break;
 			
 			case 3 :
 				cout << "나아간 곳에 놓인 수상쩍은 포션을 마셨습니다. 2hp를 회복합니다.";
-				IncreaseHP(2);
+				man[chose]->IncreaseHP(2);
 				break;
 			case 4 :
 				cout << "목적지에 도달했습니다. 게임을 종료합니다.";
@@ -127,7 +127,7 @@ int main() {
 				break;
 		}
 
-		if (!CheckUser(*this)){
+		if (man[chose]->CheckUser()) {
 			cout << "체력이 다 떨어졌습니다. 힘아 다합니다. 게임 종료....";
 			exit(0);
 		}
@@ -140,10 +140,10 @@ int main() {
 }
 
 // 지도와 사용자 위치 출력하는 함수
-void displayMap(int map[][mapX], int man[chose]->user_x, int man[chose]->user_y) {
+void displayMap(int map[][mapX], int user_x, int user_y) {
 	for (int i = 0; i < mapY; i++) {
 		for (int j = 0; j < mapX; j++) {
-			if (i == man[chose]->user_y && j == man[chose]->user_x) {
+			if (i == user_y && j == user_x) {
 				cout << " USER |"; // 양 옆 1칸 공백
 			}
 			else {
@@ -171,10 +171,3 @@ void displayMap(int map[][mapX], int man[chose]->user_x, int man[chose]->user_y)
 		cout << " -------------------------------- " << endl;
 	}
 }
-
-
-
-
-
-
-
