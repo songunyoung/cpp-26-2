@@ -1,0 +1,19 @@
+name: Check all C++ builds
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          install: git python mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-binutils
+
+      - name: Compile sources and link each main
+        shell: msys2 {0}
+        run: python3 scripts/check_cpp.py

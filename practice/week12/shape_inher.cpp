@@ -18,7 +18,7 @@ Shape() {
 class Rectangle : public Shape {
     int width, height;
     public:
-    Rectangle(intx,inty,intw,inth):Shape(x,y){
+    Rectangle(int x,int y,int w,int h):Shape(x,y){
         width=w;
         height=h;
         cout<<"Rectangle생성자(x,y,w,h)"<<endl;
