@@ -7,7 +7,7 @@ class RemoteControl {
     virtual void TurnOFF() =0;
 };
 
-class Television {
+class Television : public RemoteControl {
     public:
     void TrunON() override {
         cout << "TV를 켭니다." << endl;
@@ -25,7 +25,7 @@ class Refrigerator : public RemoteControl {
     void TrunOFF() override {
         cout << "냉장고를를 끕니다." << endl;
     }
-}
+};
 
 int main(){
     RemoteControl* remoteTV = new Television();
