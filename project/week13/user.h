@@ -16,7 +16,7 @@ public:
 	void IncreaseHP(int inc_hp);
 	void DecreaseHP(int dec_hp);
 	int GetHP();
-	void doAttack();
+	virtual void doAttack();
 	void myTurn(const vector<vector<int>>& map);
 };
 

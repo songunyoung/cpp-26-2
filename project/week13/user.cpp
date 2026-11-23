@@ -48,4 +48,4 @@ bool checkXY(int user_x, int mapX, int user_y, int mapY) {
 // 유저의 위치가 목적지인지 체크하는 함수
 bool checkGoal(int map[][mapX], int user_x, int user_y) {
 	// 목적지 도착하면
-	if (map[user_y][user_x] == 4) { return 0;}}//이게 왜있어야하는지 모르겠다?
+	if (map[user_y][user_x] == 4) { return 0;}}

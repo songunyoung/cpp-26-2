@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 class Shape {
 protected:
 int x, y;
